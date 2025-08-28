@@ -3,6 +3,8 @@ set shell powershell
 set hidden false
 set hidden!
 
+cmd open &start $Env:f
+
 map m $micro $Env:f
 
 map N $nvim $Env:f
@@ -29,3 +31,4 @@ map C copy
 map V paste
 
 map E $start .
+
