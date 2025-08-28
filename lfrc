@@ -1,13 +1,16 @@
 # interpreter for shell commands
 set shell powershell
-set hidden true
-
-# change the default open command to work in powerShell
-cmd open &start $Env:f
+set hidden false
+set hidden!
 
 map m $micro $Env:f
 
-map n $nvim $Env:f
+map N $nvim $Env:f
+
+map n #reiniciamos n
+map nf $New-Item -Path 'nuevo.txt' -ItemType File
+map nd $mkdir new_directory
+
 
 # change the shell used in default shell keybinding
 map w $powershell
