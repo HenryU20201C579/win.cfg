@@ -7,19 +7,18 @@ cmd open &start $Env:f
 
 map m $micro $Env:f
 
-map N $nvim $Env:f
+map n $nvim $Env:f
 
-map n #reiniciamos n
-map nf $New-Item -Path 'nuevo.txt' -ItemType File
-map nd $mkdir new_directory
-
+map c #reiniciamos n
+map cf $New-Item -Path 'new-file.txt' -ItemType File
+map cd $mkdir new-directory
 
 # change the shell used in default shell keybinding
 map w $powershell
 
 map D :delete
 
-map F $fzf
+map F $fzf | ForEach-Object { lf $(Split-Path $_ -Parent) }
 
 # NAVEGACIÓN
 map gd cd "~\Downloads"
@@ -31,4 +30,3 @@ map C copy
 map V paste
 
 map E $start .
-
