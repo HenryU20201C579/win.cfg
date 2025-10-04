@@ -1,0 +1,24 @@
+[[mgr.prepend_keymap]]
+on   = [ "g", "a" ]
+run  = 'cd "~\AppData"'  # We need to escape the backslash
+desc = 'Appdata'
+
+[[mgr.prepend_keymap]]
+on   = [ "g", "e" ]
+run  = 'cd "~\OneDrive\Escritorio"'  # We need to escape the backslash
+desc = 'Escritorio'
+
+[[mgr.prepend_keymap]]
+on  = ["w"]
+run = "tab_close"
+desc = "Cerrar pestaña actual"
+
+[[mgr.prepend_keymap]]
+on  = "t"
+run = 'shell --orphan -- "start powershell"'
+desc = "Abrir PowerShell en la carpeta actual"
+
+[[mgr.prepend_keymap]]
+on  = "e"
+run = 'shell --orphan -- "start explorer ."'
+desc = "Abrir carpeta actual en el Explorador de archivos"
